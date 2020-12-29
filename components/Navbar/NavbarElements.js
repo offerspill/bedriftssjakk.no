@@ -58,6 +58,10 @@ export const NavMenu = styled.div`
     margin-bottom: 1.5rem;
     height: 100%;
     cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+    }
   }
 `;
 

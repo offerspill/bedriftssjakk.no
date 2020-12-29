@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Text } from "@chakra-ui/react";
 
 const StyledHero = styled.div`
   font-size: 20px;
@@ -68,11 +68,11 @@ const Hero = () => {
           <Heading as="h1" size="4xl" mb="2rem" mt="4rem">
             Sjakk for bedrifter
           </Heading>
-          <p>Hjemmekontor?</p>
-          <p>
+          <Text>Hjemmekontor?</Text>
+          <Text>
             Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
             kolleger samtidig som du lærer noe nyttig?
-          </p>
+          </Text>
         </TextContent>
         <ButtonLink href="#stuff">Se våre pakker</ButtonLink>
       </Column1>
