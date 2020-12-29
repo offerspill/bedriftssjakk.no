@@ -8,6 +8,8 @@ export const Nav = styled.nav`
   left: 0;
   top: 0;
 
+  padding-left: 3rem;
+
   background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
 
   display: flex;
@@ -38,7 +40,8 @@ export const NavMenu = styled.div`
   width: 50%;
   margin-left: 3rem;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
   margin-top: 2rem;
   font-weight: 100;
 

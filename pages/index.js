@@ -54,6 +54,7 @@ const FrontpageImage = styled(Image)`
 
 const Column1 = styled.div`
   padding-left: 4rem;
+
   width: 50%;
   height: 50%;
 `;
