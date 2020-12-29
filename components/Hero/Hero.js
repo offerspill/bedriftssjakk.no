@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { Heading, Text } from "@chakra-ui/react";
+import { Parallax } from "react-scroll-parallax";
 
 const StyledHero = styled.div`
   font-size: 20px;
@@ -105,7 +106,9 @@ const Hero = () => {
         <ButtonLink href="#pakker">Se våre pakker</ButtonLink>
       </Column1>
       <Column2>
-        <img width="500px" src="./chess.jpeg" />
+        <Parallax y={[40, -40]}>
+          <img width="500px" src="./chess.jpeg" />
+        </Parallax>
       </Column2>
     </StyledHero>
   );

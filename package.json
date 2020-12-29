@@ -16,6 +16,7 @@
     "react-dom": "^16.8.0",
     "react-icons": "^4.1.0",
     "react-is": "^16.8.0",
+    "react-scroll-parallax": "^2.3.5",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {

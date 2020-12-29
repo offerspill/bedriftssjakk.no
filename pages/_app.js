@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -33,10 +34,12 @@ const chakraTheme = extendTheme({
 export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={chakraTheme}>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ParallaxProvider>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ParallaxProvider>
     </ChakraProvider>
   );
 }

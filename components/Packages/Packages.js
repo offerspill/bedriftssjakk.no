@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, Heading } from "@chakra-ui/react";
+import { Parallax } from "react-scroll-parallax";
 
 const StyledPackages = styled.div`
   min-height: 100vh;
@@ -48,11 +49,17 @@ const Packages = () => {
           Våre pakker
         </Heading>
         <CardWrapper>
-          <Card>
-            <Heading as="h3" size="xl"></Heading>
-          </Card>
-          <MainCard></MainCard>
-          <Card></Card>
+          <Parallax y={[20, -20]}>
+            <Card>
+              <Heading as="h3" size="xl"></Heading>
+            </Card>
+          </Parallax>
+          <Parallax y={[35, -35]}>
+            <MainCard></MainCard>
+          </Parallax>
+          <Parallax y={[25, -25]}>
+            <Card></Card>
+          </Parallax>
         </CardWrapper>
       </PackagesContent>
     </StyledPackages>
