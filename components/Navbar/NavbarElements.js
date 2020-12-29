@@ -20,6 +20,35 @@ export const Nav = styled.nav`
 export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  position: relative;
+  width: 100%;
+`;
+
+export const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 3rem;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 2rem;
+  font-weight: 100;
+
+  white-space: nowrap;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+  }
 `;
 
 export const ExternalNavLink = styled.a`
@@ -49,6 +78,10 @@ export const NavLink = styled(Link)`
   }
 `;
 
+export const NavLinkElement = styled.p`
+  color: white;
+`;
+
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
@@ -61,25 +94,5 @@ export const Bars = styled(FaBars)`
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
-  }
-`;
-
-export const NavMenu = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: -24px;
-  white-space: nowrap;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-  justify-content: flex-end;
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;

@@ -19,8 +19,17 @@ const FrontpageContainer = styled.div`
   padding: 3rem;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+
+  h1 {
+    font-size: 80px;
+    width: 500px;
+  }
+
+  p {
+    width: 400px;
+    font-weight: 100;
+  }
 `;
 
 const FrontpageImage = styled(Image)`
@@ -59,6 +68,10 @@ export default function Home() {
         <Column1>
           <h1>Sjakk for bedrifter</h1>
           <p>Hjemmekontor?</p>
+          <p>
+            Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
+            kolleger samtidig som du lærer noe nyttig?
+          </p>
         </Column1>
         <Column2>
           <img width="500px" src="./chess.jpeg" />
