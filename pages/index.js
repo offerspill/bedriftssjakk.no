@@ -32,12 +32,28 @@ const FrontpageContainer = styled.div`
   }
 `;
 
+const ButtonLink = styled.a`
+  text-decoration: none;
+  background-color: white;
+  color: ${(props) => props.theme.colors.primary};
+  padding: 0.9rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+`;
+
+const TextContent = styled.div`
+  margin-bottom: 4rem;
+`;
+
 const FrontpageImage = styled(Image)`
   width: 400px;
   height: 100px;
 `;
 
 const Column1 = styled.div`
+  padding-left: 4rem;
   width: 50%;
   height: 50%;
 `;
@@ -45,6 +61,10 @@ const Column1 = styled.div`
 const Column2 = styled.div`
   width: 50%;
   height: 50%;
+
+  img {
+    margin-top: 6rem;
+  }
 `;
 
 export default function Home() {
@@ -66,12 +86,15 @@ export default function Home() {
       <Navbar toggle={toggle} navbar={dummyNavbar} />
       <FrontpageContainer>
         <Column1>
-          <h1>Sjakk for bedrifter</h1>
-          <p>Hjemmekontor?</p>
-          <p>
-            Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
-            kolleger samtidig som du lærer noe nyttig?
-          </p>
+          <TextContent>
+            <h1>Sjakk for bedrifter</h1>
+            <p>Hjemmekontor?</p>
+            <p>
+              Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
+              kolleger samtidig som du lærer noe nyttig?
+            </p>
+          </TextContent>
+          <ButtonLink href="#stuff">Se våre pakker</ButtonLink>
         </Column1>
         <Column2>
           <img width="500px" src="./chess.jpeg" />

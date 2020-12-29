@@ -15,6 +15,13 @@ export const Nav = styled.nav`
   margin: 0 auto;
   z-index: 10;
   justify-content: flex-start;
+  position: relative;
+`;
+
+export const Logo = styled.img`
+  position: absolute;
+  top: 2.5rem;
+  right: 14rem;
 `;
 
 export const NavContainer = styled.div`

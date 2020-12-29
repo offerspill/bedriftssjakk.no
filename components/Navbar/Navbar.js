@@ -5,7 +5,7 @@ import {
   NavMenu,
   NavLink,
   NavContainer,
-  Knight,
+  Logo,
 } from "./NavbarElements";
 
 const Navbar = ({ toggle, navbar }) => {
@@ -32,6 +32,7 @@ const Navbar = ({ toggle, navbar }) => {
           </ExternalNavLink>*/}
           </NavMenu>
         </NavContainer>
+        <Logo height="21px" width="150px" src={"./logo.png"} />
       </Nav>
     </>
   );
