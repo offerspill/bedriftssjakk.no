@@ -1,14 +1,11 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
-
-
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
   }
 `;
 
@@ -21,13 +18,21 @@ const theme = {
   },
 };
 
+const chakraTheme = extendTheme({
+  fonts: {
+    body: "sans-serif",
+    heading: "sans-serif",
+    mono: "Menlo, monospace",
+  },
+});
+
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <ChakraProvider theme={chakraTheme}>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+    </ChakraProvider>
   );
 }
