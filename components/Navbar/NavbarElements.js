@@ -60,7 +60,8 @@ export const NavMenu = styled.div`
     cursor: pointer;
 
     &:hover {
-      font-weight: bold;
+      background: #fff;
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 `;

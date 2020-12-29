@@ -78,7 +78,7 @@ const Hero = () => {
             kolleger samtidig som du lærer noe nyttig?
           </Text>
         </TextContent>
-        <ButtonLink href="#stuff">Se våre pakker</ButtonLink>
+        <ButtonLink href="#pakker">Se våre pakker</ButtonLink>
       </Column1>
       <Column2>
         <img width="500px" src="./chess.jpeg" />

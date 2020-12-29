@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import { useState } from "react";
 import Hero from "../components/Hero/Hero";
 import Packages from "../components/Packages/Packages";
+import Instructors from "../components/Instructors/Instructors";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ export default function Home() {
       <Navbar toggle={toggle} navbar={dummyNavbar} />
       <Hero />
       <Packages />
+      <Instructors />
     </>
   );
 }
