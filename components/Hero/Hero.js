@@ -35,6 +35,10 @@ const ButtonLink = styled.a`
 
 const TextContent = styled.div`
   margin-bottom: 4rem;
+
+  h1 {
+    max-width: 400px;
+  }
 `;
 
 const FrontpageImage = styled(Image)`

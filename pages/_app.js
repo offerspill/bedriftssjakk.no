@@ -2,6 +2,10 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const GlobalStyle = createGlobalStyle`
+  html {
+      scroll-behavior: smooth;
+  }
+  
   body {
     margin: 0;
     padding: 0;

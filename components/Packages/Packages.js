@@ -42,13 +42,15 @@ const MainCard = styled.div`
 
 const Packages = () => {
   return (
-    <StyledPackages>
+    <StyledPackages id="pakker">
       <PackagesContent>
         <Heading as="h1" size="3xl" mb="2rem">
           Våre pakker
         </Heading>
         <CardWrapper>
-          <Card></Card>
+          <Card>
+            <Heading as="h3" size="xl"></Heading>
+          </Card>
           <MainCard></MainCard>
           <Card></Card>
         </CardWrapper>

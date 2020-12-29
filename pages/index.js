@@ -12,8 +12,8 @@ export default function Home() {
   };
 
   const dummyNavbar = [
-    { link: "https://vg.no", title: "Hjem" },
-    { link: "https://vg.no", title: "Våre pakker" },
+    { link: "/", title: "Hjem" },
+    { link: "#pakker", title: "Våre pakker" },
     { link: "https://vg.no", title: "Instruktører" },
     { link: "https://vg.no", title: "Kontakt" },
   ];
