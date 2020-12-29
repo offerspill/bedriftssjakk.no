@@ -20,6 +20,15 @@ const StyledHero = styled.div`
     width: 400px;
     font-weight: 100;
   }
+
+  @media screen and (max-width: 1080px) {
+    background: #423cec;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 `;
 
 const ButtonLink = styled.a`
@@ -31,6 +40,13 @@ const ButtonLink = styled.a`
   padding-right: 2rem;
   text-transform: uppercase;
   font-weight: 700;
+
+  white-space: nowrap;
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 `;
 
 const TextContent = styled.div`
@@ -38,6 +54,10 @@ const TextContent = styled.div`
 
   h1 {
     max-width: 400px;
+
+    @media screen and (max-width: 1012px) {
+      width: 1000px;
+    }
   }
 `;
 
@@ -61,6 +81,10 @@ const Column2 = styled.div`
     margin-top: 6rem;
     filter: grayscale(1);
     box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
+
+    @media screen and (max-width: 1012px) {
+      display: none;
+    }
   }
 `;
 

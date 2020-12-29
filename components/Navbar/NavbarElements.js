@@ -17,12 +17,31 @@ export const Nav = styled.nav`
   margin: 0 auto;
   z-index: 10;
   justify-content: flex-start;
+
+  @media screen and (max-width: 1080px) {
+    background: #423cec;
+  }
 `;
 
 export const Logo = styled.img`
   position: absolute;
-  top: 2.5rem;
+  top: 2.6rem;
   right: 14rem;
+
+  @media screen and (max-width: 1080px) {
+    filter: brightness(0) invert(1);
+    right: 5rem;
+  }
+
+  @media screen and (max-width: 1012px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+
+    left: 4.5rem;
+  }
 `;
 
 export const NavContainer = styled.div`
