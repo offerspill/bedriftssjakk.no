@@ -13,11 +13,6 @@ const Navbar = ({ toggle, navbar }) => {
     <>
       <Nav>
         <NavContainer>
-          <NavLink href="/">
-            <a>
-              <Knight />
-            </a>
-          </NavLink>
           <Bars onClick={toggle} />
           <NavMenu>
             {navbar?.map((navElement) => {

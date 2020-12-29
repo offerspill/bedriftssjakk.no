@@ -9,9 +9,13 @@ const Title = styled.h1`
 `;
 
 const FrontpageContainer = styled.div`
+  font-size: 20px;
   box-sizing: border-box;
-  background: #2632a3;
-  height: 100vh;
+
+  background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
+
+  color: ${(props) => props.theme.colors.text.light};
+  height: calc(100vh - 80px);
   padding: 3rem;
 
   display: flex;

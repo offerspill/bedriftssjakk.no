@@ -1,22 +1,20 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
-import { GiChessKnight } from "react-icons/gi";
 
-export const Knight = styled(GiChessKnight)`
-  color: white;
-  height: 40px;
-  width: 40px;
-  margin-left: 1rem;
-`;
 export const Nav = styled.nav`
   height: 80px;
+  position: sticky;
+  left: 0;
+  top: 0;
+
+  background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
+
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   z-index: 10;
   justify-content: flex-start;
-  background: ${(props) => props.theme.colors.menuBackground};
 `;
 
 export const NavContainer = styled.div`
@@ -54,6 +52,7 @@ export const NavLink = styled(Link)`
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
+
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
