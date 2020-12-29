@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
 export const Nav = styled.nav`
-  height: 80px;
+  height: 100px;
   position: sticky;
   left: 0;
   top: 0;
@@ -17,7 +17,6 @@ export const Nav = styled.nav`
   margin: 0 auto;
   z-index: 10;
   justify-content: flex-start;
-  position: relative;
 `;
 
 export const Logo = styled.img`
@@ -56,6 +55,7 @@ export const NavMenu = styled.div`
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
+    margin-bottom: 1.5rem;
     height: 100%;
     cursor: pointer;
   }

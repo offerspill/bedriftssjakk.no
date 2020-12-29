@@ -9,7 +9,7 @@ const StyledHero = styled.div`
   background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
 
   color: ${(props) => props.theme.colors.text.light};
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   padding: 3rem;
 
   display: flex;
@@ -59,6 +59,8 @@ const Column2 = styled.div`
 
   img {
     margin-top: 6rem;
+    filter: grayscale(1);
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
   }
 `;
 
