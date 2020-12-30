@@ -7,11 +7,34 @@ import {
   NavContainer,
   Logo,
 } from "./NavbarElements";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Navbar = ({ toggle, navbar }) => {
+  const [transparentBackground, setTransparentBackground] = useState(false);
+  const [blueBackground, setBlueBackground] = useState(false);
+
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      const shouldHaveTransparentBackground = currPos.y < -630;
+      const shouldHaveBlueBackground = currPos.y < -820;
+      console.log(currPos.y);
+      if (shouldHaveTransparentBackground !== transparentBackground) {
+        setTransparentBackground(shouldHaveTransparentBackground);
+      }
+
+      if (shouldHaveBlueBackground !== blueBackground) {
+        setBlueBackground(shouldHaveBlueBackground);
+      }
+    },
+    [transparentBackground, blueBackground]
+  );
+
   return (
     <>
-      <Nav>
+      <Nav
+        transparentBackground={transparentBackground}
+        blueBackground={blueBackground}
+      >
         <NavContainer>
           <Bars onClick={toggle} />
           <NavMenu>

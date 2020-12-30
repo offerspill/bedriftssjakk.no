@@ -10,7 +10,14 @@ export const Nav = styled.nav`
 
   padding-left: 3rem;
 
-  background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
+  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
+
+  background: ${({ transparentBackground, blueBackground }) =>
+    blueBackground
+      ? "#423cec"
+      : transparentBackground
+      ? "none"
+      : "linear-gradient(to left, #ffffff 40%, #423cec 20%)"};
 
   display: flex;
   justify-content: space-between;
@@ -107,6 +114,7 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
   &.active {
     color: #3ab99b;
   }

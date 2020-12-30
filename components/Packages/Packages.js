@@ -16,7 +16,9 @@ const StyledPackages = styled.div`
   }
 `;
 
-const PackagesContent = styled.div``;
+const PackagesContent = styled.div`
+  margin-top: 2rem;
+`;
 
 const CardWrapper = styled.div`
   display: flex;
