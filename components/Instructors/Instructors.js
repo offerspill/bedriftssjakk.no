@@ -20,7 +20,7 @@ const InstructorContent = styled.div``;
 
 const Instructors = () => {
   return (
-    <StyledInstructors id="instruktører">
+    <StyledInstructors id="instruktorer">
       <InstructorContent>
         <Heading as="h1" size="3xl" mb="2rem">
           Instruktører

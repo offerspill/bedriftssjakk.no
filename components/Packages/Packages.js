@@ -27,19 +27,19 @@ const CardWrapper = styled.div`
 `;
 
 const Card = styled.div`
-  height: 300px;
-  width: 200px;
+  height: 350px;
+  width: 250px;
   background: #fff;
   border-radius: 5px;
 
   margin: 2rem;
+
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
 `;
 
-const MainCard = styled.div`
-  height: 340px;
-  width: 220px;
-  background: #fff;
-  border-radius: 5px;
+const MainCard = styled(Card)`
+  transform: scale(1.1);
+  margin: 1rem;
 `;
 
 const Packages = () => {
