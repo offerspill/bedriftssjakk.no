@@ -8,16 +8,18 @@ import {
   Logo,
 } from "./NavbarElements";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { useWindowWidth, useWindowHeight } from "@react-hook/window-size";
 
 const Navbar = ({ toggle, navbar }) => {
   const [transparentBackground, setTransparentBackground] = useState(false);
   const [blueBackground, setBlueBackground] = useState(false);
+  const height = useWindowHeight();
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const shouldHaveTransparentBackground = currPos.y < -630;
-      const shouldHaveBlueBackground = currPos.y < -820;
-      console.log(currPos.y);
+      const shouldHaveTransparentBackground = currPos.y < -height + 80;
+      const shouldHaveBlueBackground = currPos.y < -height - 40;
+
       if (shouldHaveTransparentBackground !== transparentBackground) {
         setTransparentBackground(shouldHaveTransparentBackground);
       }

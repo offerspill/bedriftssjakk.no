@@ -36,7 +36,7 @@ const ButtonLink = styled.a`
   text-decoration: none;
   background-color: white;
   color: ${(props) => props.theme.colors.primary};
-  padding: 0.9rem;
+  padding: 1.2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   text-transform: uppercase;
@@ -79,7 +79,7 @@ const Column2 = styled.div`
   height: 50%;
 
   img {
-    margin-top: 6rem;
+    margin-top: 5rem;
     filter: grayscale(1);
     box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
 
@@ -107,7 +107,7 @@ const Hero = () => {
       </Column1>
       <Column2>
         <Parallax y={[40, -40]}>
-          <img width="500px" src="./chess.jpeg" />
+          <img width="600px" src="./chess.jpeg" />
         </Parallax>
       </Column2>
     </StyledHero>
