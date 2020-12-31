@@ -121,7 +121,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const NavLinkElement = styled.p`
-  color: white;
+  color: ${(props) => props.theme.colors.white};
 `;
 
 export const Bars = styled(FaBars)`

@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 const StyledInstructors = styled.div`
   min-height: 100vh;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
 
   h1 {
-    color: white;
     display: block;
     text-align: center;
   }

@@ -34,7 +34,7 @@ const StyledHero = styled.div`
 
 const ButtonLink = styled.a`
   text-decoration: none;
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.primary};
   padding: 1.2rem;
   padding-left: 2rem;
