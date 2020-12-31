@@ -32,7 +32,7 @@ const StyledHero = styled.div`
   }
 `;
 
-const ButtonLink = styled.a`
+export const ButtonLink = styled.a`
   text-decoration: none;
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.primary};
