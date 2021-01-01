@@ -29,22 +29,32 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Card = styled.div`
   height: 375px;
-  width: 275px;
+  max-width: 275px;
   background: #fff;
   border-radius: 10px;
 
   margin-right: -3rem;
 
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0.5rem;
+    width: 300px;
+  }
 `;
 
 const MainCard = styled.div`
   height: 600px;
-  width: 440px;
+  max-width: 440px;
   background: #fff;
   border-radius: 10px;
 
@@ -53,6 +63,10 @@ const MainCard = styled.div`
   margin: 2rem;
 
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
+
+  @media screen and (max-width: 468px) {
+    margin: 0;
+  }
 `;
 
 const CardHeader = styled.div`
@@ -90,7 +104,7 @@ const Button = styled.button`
   background: #8d89f3;
   padding: 1rem;
 
-  width: 300px;
+  max-width: 300px;
   height: 70px;
   border-radius: 5px;
 
