@@ -34,7 +34,7 @@ const Name = styled.span`
 const Instructor = styled.div`
   display: flex;
   flex-direction: column;
-
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   background: white;
   padding: 2rem;
   border-radius: 5px;
