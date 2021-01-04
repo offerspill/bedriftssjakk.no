@@ -4,6 +4,7 @@ import { useState } from "react";
 import Hero from "../components/Hero/Hero";
 import Packages from "../components/Packages/Packages";
 import Instructors from "../components/Instructors/Instructors";
+import Contact from "../components/Contact/Contact";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <Packages />
       <Instructors />
+      <Contact />
     </>
   );
 }
