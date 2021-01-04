@@ -22,7 +22,7 @@ const ContactContent = styled.div``;
 
 const Contact = () => {
   return (
-    <StyledContact id="contact">
+    <StyledContact id="kontakt">
       <ContactContent>
         <Heading as="h1" size="3xl" mb="2rem">
           Kontakt oss

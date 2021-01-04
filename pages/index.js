@@ -17,7 +17,7 @@ export default function Home() {
     { link: "/", title: "Hjem" },
     { link: "#pakker", title: "Våre pakker" },
     { link: "#instruktorer", title: "Instruktører" },
-    { link: "https://vg.no", title: "Kontakt" },
+    { link: "#kontakt", title: "Kontakt" },
   ];
 
   return (
