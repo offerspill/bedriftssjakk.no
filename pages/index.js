@@ -6,12 +6,14 @@ import Packages from "../components/Packages/Packages";
 import Instructors from "../components/Instructors/Instructors";
 import Contact from "../components/Contact/Contact";
 
-export default function Home() {
+function Home({ stars }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  console.log("stars", stars);
 
   const dummyNavbar = [
     { link: "/", title: "Hjem" },
@@ -30,3 +32,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async (ctx) => {
+  const res = await fetch("https://api.github.com/repos/vercel/next.js");
+  const json = await res.json();
+  console.log("json", json);
+  return { props: { stars: json.stargazers_count } };
+};
+
+export default Home;

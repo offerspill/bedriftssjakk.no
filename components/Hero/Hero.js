@@ -54,10 +54,6 @@ const TextContent = styled.div`
 
   h1 {
     max-width: 400px;
-
-    @media screen and (max-width: 1012px) {
-      width: 1000px;
-    }
   }
 `;
 
