@@ -13,8 +13,6 @@ function Home({ stars }) {
     setIsOpen(!isOpen);
   };
 
-  console.log("stars", stars);
-
   const dummyNavbar = [
     { link: "/", title: "Hjem" },
     { link: "#pakker", title: "Våre pakker" },
