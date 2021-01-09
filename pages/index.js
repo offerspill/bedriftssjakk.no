@@ -5,8 +5,9 @@ import Hero from "../components/Hero/Hero";
 import Packages from "../components/Packages/Packages";
 import Instructors from "../components/Instructors/Instructors";
 import Contact from "../components/Contact/Contact";
+import client from "../client";
 
-function Home({ stars }) {
+function Home({ data }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -25,17 +26,16 @@ function Home({ stars }) {
       <Navbar toggle={toggle} navbar={dummyNavbar} />
       <Hero />
       <Packages />
-      <Instructors />
+      <Instructors instructors={data.instructors} />
       <Contact />
     </>
   );
 }
 
 export const getStaticProps = async (ctx) => {
-  const res = await fetch("https://api.github.com/repos/vercel/next.js");
-  const json = await res.json();
-  console.log("json", json);
-  return { props: { stars: json.stargazers_count } };
+  const res = await client.fetch('*[_type == "bedriftssjakk"][0]');
+
+  return { props: { data: res } };
 };
 
 export default Home;

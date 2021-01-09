@@ -69,39 +69,23 @@ const InstructorContent = styled.div`
   justify-content: center;
 `;
 
-const Instructors = () => {
+const Instructors = ({ instructors }) => {
   return (
     <StyledInstructors id="instruktorer">
       <Heading as="h1" size="3xl" mb="2rem">
         Instruktører
       </Heading>
       <InstructorContent>
-        <Instructor>
-          <div>
-            <Image src="./testimg.jpg" />
-          </div>
-          <Name>Navn navn navn</Name>
-          <Title>Candidate master</Title>
-          <Description>Blablabla er en internasjonal maeste rsom</Description>
-        </Instructor>
-        <Instructor>
-          <div>
-            <Image src="./testimg.jpg" />
-          </div>
-          <Name>Navn navn navn</Name>
-          <Title>Stormester</Title>
-          <Description>Blablabla er en internasjonal maeste rsom</Description>
-        </Instructor>
-        <Instructor>
-          <div>
-            <Image src="./testimg.jpg" />
-          </div>
-          <Name>Navn navn navn</Name>
-          <Title>Internasjonal mester</Title>
-          <Description>
-            Blablabla bøabøabøa babøabøabøabø fiorjoer jgore gjreo greijer
-          </Description>
-        </Instructor>
+        {instructors.map((instructor) => (
+          <Instructor>
+            <div>
+              <Image src="./testimg.jpg" />
+            </div>
+            <Name>{instructor.name}</Name>
+            <Title>{instructor.title}</Title>
+            <Description>{instructor.description}</Description>
+          </Instructor>
+        ))}
       </InstructorContent>
     </StyledInstructors>
   );
