@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import {
-  Box,
-  Heading,
-  Text,
-  Flex,
-  Input,
-  Textarea,
-  Button,
-} from "@chakra-ui/react";
+import { Heading, Text, Input, Textarea, Button } from "@chakra-ui/react";
 
 const StyledContact = styled.div`
   padding-top: 100px;
