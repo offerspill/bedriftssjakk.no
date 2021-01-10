@@ -44,7 +44,27 @@ const StyledInput = styled(Input)`
 
 const Contact = () => {
   const onSubmit = (formData) => {
-    console.log("formData", formData);
+    const submitUrl =
+      "https://script.google.com/macros/s/AKfycby2OQ4RrpSXwaQIIsXWINuiFIO_sKWdVRYKmtamSgVPzpBvr5qBz9SU5w/exec";
+    console.log("submitting", formData);
+
+    const data = new FormData();
+    data.set("Email", formData.email);
+    data.set("Text", formData.text);
+
+    fetch(submitUrl, {
+      method: "POST",
+      body: data,
+    })
+      .then((response) => {
+        console.log("response", response);
+      })
+      .catch((err) => {
+        console.error("Error:", error);
+      })
+      .finally(() => {
+        console.log("done");
+      });
   };
 
   const { handleSubmit, register, errors } = useForm();
@@ -59,12 +79,6 @@ const Contact = () => {
           Fyll ut skjemaet, så tar vi kontakt.
         </Text>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <StyledInput
-            variant="filled"
-            placeholder="Navn"
-            name="name"
-            ref={register}
-          />
           <StyledInput
             variant="filled"
             placeholder="E-post"
