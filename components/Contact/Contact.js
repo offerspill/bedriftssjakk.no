@@ -60,7 +60,7 @@ const Contact = () => {
         console.log("response", response);
       })
       .catch((err) => {
-        console.error("Error:", error);
+        console.error("Error", err);
       })
       .finally(() => {
         console.log("done");
