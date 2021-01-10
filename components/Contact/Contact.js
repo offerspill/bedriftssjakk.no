@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Input, Textarea } from "@chakra-ui/react";
 
 const StyledContact = styled.div`
   padding-top: 100px;
@@ -12,13 +12,25 @@ const StyledContact = styled.div`
   align-items: center;
 
   h1 {
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.primary};
     display: block;
     text-align: center;
   }
 `;
 
-const ContactContent = styled.div``;
+const ContactContent = styled.div`
+  background-color: white;
+  padding: 10rem;
+  border-radius: 5px;
+`;
+
+const Form = styled.div``;
+
+const StyledInput = styled(Input)`
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+`;
 
 const Contact = () => {
   return (
@@ -27,6 +39,14 @@ const Contact = () => {
         <Heading as="h1" size="3xl" mb="2rem">
           Kontakt oss
         </Heading>
+        <Form>
+          <StyledInput variant="filled" placeholder="Navn" />
+          <StyledInput variant="filled" placeholder="E-post" />
+          <Textarea
+            variant="filled"
+            placeholder="Skriv hvilken pakke du vil ha, og eventuelt andre ønsker"
+          />
+        </Form>
       </ContactContent>
     </StyledContact>
   );
