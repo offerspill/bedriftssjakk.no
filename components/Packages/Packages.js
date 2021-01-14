@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import { HiCheckCircle } from "react-icons/hi";
+import { GoPerson } from "react-icons/go";
 import { List, ListItem, ListIcon, UnorderedList } from "@chakra-ui/react";
 import { ButtonLink } from "../Hero/Hero";
 
@@ -37,7 +38,7 @@ const CardWrapper = styled.div`
 `;
 
 const Card = styled.div`
-  height: 375px;
+  height: 300px;
   max-width: 275px;
   background: #fff;
   border-radius: 10px;
@@ -100,12 +101,11 @@ const StyledListItem = styled(ListItem)`
   font-size: 18px;
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   background: #8d89f3;
   padding: 1rem;
 
   max-width: 300px;
-  height: 70px;
   border-radius: 5px;
 
   &:hover {
@@ -113,7 +113,7 @@ const Button = styled.button`
   }
 `;
 
-const ButtonGrey = styled.button`
+const ButtonGrey = styled.a`
   background: #8d89f3;
   padding: 1rem;
 
@@ -135,7 +135,7 @@ const Packages = () => {
           <Card>
             <CardHeader>
               <Text fontSize="xl" fontWeight="bold">
-                STANDARD
+                TILPASSET
               </Text>
             </CardHeader>
             <Price>
@@ -143,24 +143,13 @@ const Packages = () => {
                 kr
               </Text>
               <Text fontSize="4xl" fontWeight="bold">
-                2000,-
+                ?
               </Text>
               <Text fontSize="20px" ml="1rem" fontWeight="bold">
                 NOK
               </Text>
             </Price>
-            <List
-              spacing={5}
-              paddingLeft="2rem"
-              paddingRight="2rem"
-              paddingBottom="2rem"
-            >
-              <StyledListItem>
-                <ListIcon as={HiCheckCircle} color="green.500" />
-                Blablabl albalbal alab ablbalbal albal
-              </StyledListItem>
-            </List>
-            <Flex justifyContent="center">
+            <Flex justifyContent="center" padding="1rem">
               <ButtonGrey href="#kontakt">
                 <Text color="white" fontSize="16px" fontWeight="bold">
                   Kontakt oss for bestilling
@@ -179,7 +168,7 @@ const Packages = () => {
                 kr
               </Text>
               <Text fontSize="5xl" fontWeight="bold">
-                3000,-
+                2000,-
               </Text>
               <Text fontSize="20px" ml="1rem" fontWeight="bold">
                 NOK
@@ -192,18 +181,16 @@ const Packages = () => {
               paddingRight="3rem"
             >
               <StyledListItem>
-                <ListIcon as={HiCheckCircle} color="green.500" />
-                Blablabl albalbal alab ablbalbal albal
+                <ListIcon as={HiCheckCircle} color="green.500" />1 time
+                undervisning tilpasset nivå, deretter
               </StyledListItem>
               <StyledListItem>
-                <ListIcon as={HiCheckCircle} color="green.500" />
-                Blablabl albalbal alab ablbalbal
-                albaljriogjrieoghreoighreoigrejhoigrehoerij
+                <ListIcon as={HiCheckCircle} color="green.500" />1 time
+                tilpasset lynsjakkturnering på nett
               </StyledListItem>
               <StyledListItem>
-                <ListIcon as={HiCheckCircle} color="green.500" />
-                Blablabl albalbal alab ablbalbal
-                albaljirojgioregjreoigjreiogjreiojgreo
+                <ListIcon as={GoPerson} color="black" />
+                Opptil 15 personer
               </StyledListItem>
             </List>
             <Flex justifyContent="center" mt="2rem">

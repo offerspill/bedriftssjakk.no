@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import { Heading, Text, Input, Textarea, Button } from "@chakra-ui/react";
 
 const StyledContact = styled.div`
-  padding-top: 100px;
-  padding-bottom: 100px;
   min-height: 100vh;
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
@@ -21,14 +19,16 @@ const StyledContact = styled.div`
 
 const ContactContent = styled.div`
   background-color: white;
-  padding: 10rem;
+  padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  width: 600px;
 `;
 
 const Form = styled.form``;
 
 const StyledInput = styled(Input)`
+  display: block;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -46,6 +46,7 @@ const Contact = () => {
 
     fetch(submitUrl, {
       method: "POST",
+      mode: "no-cors",
       body: data,
     })
       .then((response) => {
@@ -73,8 +74,26 @@ const Contact = () => {
         <Form onSubmit={handleSubmit(onSubmit)}>
           <StyledInput
             variant="filled"
+            placeholder="Navn"
+            name="name"
+            ref={register}
+          />
+          <StyledInput
+            variant="filled"
+            placeholder="Bedriftsnavn/Gruppe"
+            name="company"
+            ref={register}
+          />
+          <StyledInput
+            variant="filled"
             placeholder="E-post"
             name="email"
+            ref={register}
+          />
+          <StyledInput
+            variant="filled"
+            placeholder="Telefonnr"
+            name="phone"
             ref={register}
           />
           <Textarea
