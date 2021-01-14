@@ -48,7 +48,7 @@ const Card = styled.div`
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
 
   @media screen and (max-width: 768px) {
-    margin-right: 0.5rem;
+    margin: 0.5rem;
     width: 300px;
   }
 `;
@@ -66,7 +66,7 @@ const MainCard = styled.div`
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
 
   @media screen and (max-width: 468px) {
-    margin: 0;
+    margin: 1rem;
   }
 `;
 

@@ -16,18 +16,13 @@ const StyledHero = styled.div`
   display: flex;
   justify-content: center;
 
-  p {
-    width: 400px;
-    font-weight: 100;
-  }
-
   @media screen and (max-width: 1080px) {
     background: #423cec;
   }
 
   @media screen and (max-width: 768px) {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 `;
 
@@ -49,8 +44,13 @@ export const ButtonLink = styled.a`
   }
 `;
 
+const StyledText = styled(Text)`
+  width: 100%;
+`;
+
 const TextContent = styled.div`
   margin-bottom: 4rem;
+  position: relative;
 
   h1 {
     max-width: 400px;
@@ -67,6 +67,10 @@ const Column1 = styled.div`
 
   width: 50%;
   height: 50%;
+
+  @media screen and (max-width: 1080px) {
+    width: auto;
+  }
 `;
 
 const Column2 = styled.div`
@@ -78,7 +82,7 @@ const Column2 = styled.div`
     filter: grayscale(1);
     box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
 
-    @media screen and (max-width: 1012px) {
+    @media screen and (max-width: 1080px) {
       display: none;
     }
   }
@@ -92,11 +96,11 @@ const Hero = () => {
           <Heading as="h1" size="4xl" mb="2rem" mt="4rem">
             Sjakk for bedrifter
           </Heading>
-          <Text>Hjemmekontor?</Text>
-          <Text>
+          <StyledText>Hjemmekontor?</StyledText>
+          <StyledText>
             Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
             kolleger samtidig som du lærer noe nyttig?
-          </Text>
+          </StyledText>
         </TextContent>
         <ButtonLink href="#pakker">Se våre pakker</ButtonLink>
       </Column1>
