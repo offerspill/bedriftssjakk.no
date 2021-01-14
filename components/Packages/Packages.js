@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import { HiCheckCircle } from "react-icons/hi";
 import { GoPerson } from "react-icons/go";
+import { GiTeacher } from "react-icons/gi";
+import { BsFillLightningFill } from "react-icons/bs";
 import { List, ListItem, ListIcon, UnorderedList } from "@chakra-ui/react";
 import { ButtonLink } from "../Hero/Hero";
 
@@ -181,11 +183,11 @@ const Packages = () => {
               paddingRight="3rem"
             >
               <StyledListItem>
-                <ListIcon as={HiCheckCircle} color="green.500" />1 time
-                undervisning tilpasset nivå, deretter
+                <ListIcon as={GiTeacher} color="#000" />1 time undervisning
+                tilpasset nivå
               </StyledListItem>
               <StyledListItem>
-                <ListIcon as={HiCheckCircle} color="green.500" />1 time
+                <ListIcon as={BsFillLightningFill} color="yellow.500" />1 time
                 tilpasset lynsjakkturnering på nett
               </StyledListItem>
               <StyledListItem>
