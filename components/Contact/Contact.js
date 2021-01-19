@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import { Heading, Text, Input, Textarea, Button } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Input,
+  Textarea,
+  Button,
+  Spinner,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
 
 const StyledContact = styled.div`
   min-height: 100vh;
@@ -31,6 +42,13 @@ const ContactContent = styled.div`
 
 const Form = styled.form``;
 
+const SpinnerWrapper = styled.div`
+  display: block;
+  max-width: 50px;
+  margin: 0 auto;
+  margin-top: 1rem;
+`;
+
 const StyledInput = styled(Input)`
   display: block;
   background-color: white;
@@ -39,7 +57,14 @@ const StyledInput = styled(Input)`
 `;
 
 const Contact = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
   const onSubmit = (formData) => {
+    setSubmitError(false);
+    setSubmitting(true);
+
     const submitUrl =
       "https://script.google.com/macros/s/AKfycby2OQ4RrpSXwaQIIsXWINuiFIO_sKWdVRYKmtamSgVPzpBvr5qBz9SU5w/exec";
 
@@ -55,14 +80,17 @@ const Contact = () => {
       body: data,
     })
       .then((response) => {
-        console.log("data", data);
-        console.log("response", response);
+        if (response.ok) {
+          setSuccess(true);
+        }
       })
       .catch((err) => {
         console.error("Error", err);
+        setSubmitError(true);
       })
       .finally(() => {
         console.log("done");
+        setSubmitting(false);
       });
   };
 
@@ -108,16 +136,36 @@ const Contact = () => {
             name="text"
             ref={register}
           />
-          <Button
-            type="submit"
-            display="block"
-            margin="0 auto"
-            mt="1rem"
-            color="white"
-            background="#423cec"
-          >
-            Send inn
-          </Button>
+          {!submitting ? (
+            <Button
+              type="submit"
+              display="block"
+              margin="0 auto"
+              mt="1rem"
+              color="white"
+              background="#423cec"
+              disabled={success}
+            >
+              Send inn
+            </Button>
+          ) : (
+            <SpinnerWrapper>
+              <Spinner />
+            </SpinnerWrapper>
+          )}
+          {success && (
+            <Alert status="success" mt="2rem" textAlign="center">
+              <AlertIcon />
+              Takk for interessen! Vi vil kontakte deg så fort som mulig.
+            </Alert>
+          )}
+          {submitError && (
+            <Alert mt="2rem" status="error">
+              <AlertIcon />
+              Noe gikk galt. Prøv igjen eller kontakt oss på
+              bedriftssjakk@offerspill.no
+            </Alert>
+          )}
         </Form>
       </ContactContent>
     </StyledContact>
