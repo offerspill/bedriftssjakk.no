@@ -41,16 +41,16 @@ const StyledInput = styled(Input)`
 const Contact = () => {
   const onSubmit = (formData) => {
     const submitUrl =
-      "https://script.google.com/macros/s/AKfycby2OQ4RrpSXwaQIIsXWINuiFIO_sKWdVRYKmtamSgVPzpBvr5qBz9SU5w/exec";
+      "https://script.google.com/macros/s/AKfycbzSIv9kL_bfqLV2ncEwTc1GJl6CDounQD99hOtHvqN67hGhMjQ/exec";
     console.log("submitting", formData);
 
     const data = new FormData();
-    data.set("Email", formData.email);
-    data.set("Text", formData.text);
+    data.set("Name", "Bplee");
+    data.set("Email", "Hello");
+    data.set("Text", "Sepp");
 
     fetch(submitUrl, {
       method: "POST",
-      mode: "no-cors",
       body: data,
     })
       .then((response) => {
