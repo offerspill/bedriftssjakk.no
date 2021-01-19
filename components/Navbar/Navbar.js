@@ -38,7 +38,6 @@ const Navbar = ({ toggle, navbar }) => {
         blueBackground={blueBackground}
       >
         <NavContainer>
-          <Bars onClick={toggle} />
           <NavMenu>
             {navbar?.map((navElement) => {
               return (

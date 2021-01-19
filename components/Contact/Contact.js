@@ -127,6 +127,7 @@ const Contact = () => {
           <StyledInput
             variant="filled"
             placeholder="Telefonnr"
+            type="number"
             name="phone"
             ref={register}
           />
