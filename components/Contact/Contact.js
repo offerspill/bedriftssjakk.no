@@ -41,19 +41,21 @@ const StyledInput = styled(Input)`
 const Contact = () => {
   const onSubmit = (formData) => {
     const submitUrl =
-      "https://script.google.com/macros/s/AKfycbzSIv9kL_bfqLV2ncEwTc1GJl6CDounQD99hOtHvqN67hGhMjQ/exec";
-    console.log("submitting", formData);
+      "https://script.google.com/macros/s/AKfycby2OQ4RrpSXwaQIIsXWINuiFIO_sKWdVRYKmtamSgVPzpBvr5qBz9SU5w/exec";
 
     const data = new FormData();
-    data.set("Name", "Bplee");
-    data.set("Email", "Hello");
-    data.set("Text", "Sepp");
+    data.set("Navn", formData.name);
+    data.set("Epost", formData.email);
+    data.set("Telefonnr", formData.phone);
+    data.set("Bedrift/Gruppe", formData.company);
+    data.set("Beskjed", formData.text);
 
     fetch(submitUrl, {
       method: "POST",
       body: data,
     })
       .then((response) => {
+        console.log("data", data);
         console.log("response", response);
       })
       .catch((err) => {
