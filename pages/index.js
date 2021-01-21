@@ -14,6 +14,8 @@ function Home({ data }) {
     setIsOpen(!isOpen);
   };
 
+  console.log("data", data);
+
   const dummyNavbar = [
     { link: "/", title: "Hjem" },
     { link: "#pakker", title: "Våre pakker" },

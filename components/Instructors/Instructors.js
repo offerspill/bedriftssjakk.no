@@ -1,6 +1,10 @@
 import React from "react";
 import { Heading, Text } from "@chakra-ui/react";
 import styled from "styled-components";
+import imageUrlBuilder from "@sanity/image-url";
+import client from "../../client";
+
+const builder = imageUrlBuilder(client);
 
 const StyledInstructors = styled.div`
   min-height: 100vh;
@@ -41,6 +45,7 @@ const Instructor = styled.div`
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   max-width: 350px;
 `;
 
@@ -70,6 +75,10 @@ const InstructorContent = styled.div`
 `;
 
 const Instructors = ({ instructors }) => {
+  function urlFor(source) {
+    return builder.image(source);
+  }
+
   return (
     <StyledInstructors id="instruktorer">
       <Heading as="h1" size="3xl" mb="2rem">
@@ -79,7 +88,7 @@ const Instructors = ({ instructors }) => {
         {instructors.map((instructor) => (
           <Instructor>
             <div>
-              <Image src="./testimg.jpg" />
+              <Image src={urlFor(instructor.image).width(160).url()} />
             </div>
             <Name>{instructor.name}</Name>
             <Title>{instructor.title}</Title>
