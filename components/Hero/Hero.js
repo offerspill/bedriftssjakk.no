@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Heading, Text } from "@chakra-ui/react";
 
 const StyledHero = styled.div`
-  font-size: 20px;
+  font-size: 24px;
   box-sizing: border-box;
 
   background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
@@ -30,22 +30,23 @@ export const ButtonLink = styled.a`
   text-decoration: none;
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.primary};
-  padding: 1.2rem;
+  padding: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 30px;
 
   white-space: nowrap;
 
   @media screen and (max-width: 768px) {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 
 const StyledText = styled(Text)`
-  width: 100%;
+  width: 75%;
 `;
 
 const TextContent = styled.div`
@@ -65,8 +66,10 @@ const FrontpageImage = styled(Image)`
 const Column1 = styled.div`
   padding-left: 4rem;
 
+  transform: scale(1.1);
+  margin-top: 4rem;
+
   width: 50%;
-  height: 50%;
 
   @media screen and (max-width: 1080px) {
     width: auto;
@@ -78,7 +81,8 @@ const Column2 = styled.div`
   height: 50%;
 
   img {
-    margin-top: 5rem;
+    margin-top: 6rem;
+    width: 700px;
     filter: grayscale(1);
     box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.42);
 
