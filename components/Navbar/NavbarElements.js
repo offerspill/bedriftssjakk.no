@@ -84,6 +84,15 @@ export const NavMenu = styled.div`
     margin-bottom: 1.5rem;
     height: 100%;
     cursor: pointer;
+    font-size: 25px;
+
+    @media screen and (max-width: 1500px) {
+      font-size: 23px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      font-size: 20px;
+    }
 
     &:hover {
       background: #fff;
