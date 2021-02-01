@@ -42,6 +42,7 @@ export const ButtonLink = styled.a`
   @media screen and (max-width: 768px) {
     padding-left: 1rem;
     padding-right: 1rem;
+    font-size: 24px;
   }
 `;
 
