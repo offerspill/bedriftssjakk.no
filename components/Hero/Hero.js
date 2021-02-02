@@ -16,6 +16,10 @@ const StyledHero = styled.div`
   display: flex;
   justify-content: center;
 
+  @media screen and (max-width: 1220px) {
+    font-size: 22px;
+  }
+
   @media screen and (max-width: 1080px) {
     background: #423cec;
   }
@@ -39,10 +43,14 @@ export const ButtonLink = styled.a`
 
   white-space: nowrap;
 
+  @media screen and (max-width: 1220px) {
+    font-size: 22px;
+  }
+
   @media screen and (max-width: 768px) {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
