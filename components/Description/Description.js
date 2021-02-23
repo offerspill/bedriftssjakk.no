@@ -13,6 +13,7 @@ import {
   AlertTitle,
   AlertDescription,
 } from "@chakra-ui/react";
+import Fade from "react-reveal/Fade";
 const BlockContent = require("@sanity/block-content-to-react");
 
 const StyledDescription = styled.div`
@@ -75,11 +76,35 @@ const Content = styled(BlockContent)`
   }
 `;
 
+const settTag = (node) => {
+  const style = node.style;
+
+  if (RegExp("/?h[1-6]").test(style)) {
+    return style;
+  }
+
+  return "div";
+};
+
+const serializers = {
+  types: {
+    block: (props) => {
+      const Tag = settTag(props.node);
+
+      return (
+        <Fade bottom>
+          <Tag>{props.children}</Tag>
+        </Fade>
+      );
+    },
+  },
+};
+
 const Description = ({ about }) => {
   console.log("About", about);
   return (
     <StyledDescription>
-      <Content blocks={about} />
+      <Content blocks={about} serializers={serializers} />
     </StyledDescription>
   );
 };
