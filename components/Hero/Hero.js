@@ -27,6 +27,7 @@ const StyledHero = styled.div`
   @media screen and (max-width: 768px) {
     padding-left: 0rem;
     padding-right: 0rem;
+    padding-top: 0;
   }
 `;
 
