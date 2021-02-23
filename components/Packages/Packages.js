@@ -170,7 +170,7 @@ const Packages = () => {
                 kr
               </Text>
               <Text fontSize="5xl" fontWeight="bold">
-                2000,-
+                4000,-
               </Text>
               <Text fontSize="20px" ml="1rem" fontWeight="bold">
                 NOK
