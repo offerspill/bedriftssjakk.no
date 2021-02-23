@@ -7,6 +7,7 @@ import Instructors from "../components/Instructors/Instructors";
 import Contact from "../components/Contact/Contact";
 import client from "../client";
 import Description from "../components/Description/Description";
+import Head from "next/head";
 
 function Home({ data }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,15 @@ function Home({ data }) {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="Hjemmekontor? Hva med et avbrekk som trener hjernen og lar deg konkurrere mot kolleger samtidig som du lærer noe nyttig?"
+        />
+        <title>Bedriftssjakk</title>
+      </Head>
       <Navbar toggle={toggle} navbar={dummyNavbar} />
       <Hero />
       <Description about={data.about} />
