@@ -6,6 +6,7 @@ import Packages from "../components/Packages/Packages";
 import Instructors from "../components/Instructors/Instructors";
 import Contact from "../components/Contact/Contact";
 import client from "../client";
+import Description from "../components/Description/Description";
 
 function Home({ data }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,7 @@ function Home({ data }) {
     <>
       <Navbar toggle={toggle} navbar={dummyNavbar} />
       <Hero />
+      <Description about={data.about} />
       <Packages />
       <Instructors instructors={data.instructors} />
       <Contact />
