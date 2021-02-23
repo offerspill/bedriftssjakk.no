@@ -34,6 +34,12 @@ function Home({ data }) {
           name="description"
           content="Hjemmekontor? Hva med et avbrekk som trener hjernen og lar deg konkurrere mot kolleger samtidig som du lærer noe nyttig?"
         />
+        <meta property="og:title" content="Bedriftssjakk" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="Hjemmekontor? Hva med et avbrekk som trener hjernen og lar deg konkurrere mot kolleger samtidig som du lærer noe nyttig?"
+          key="ogdesc"
+        />
         <title>Bedriftssjakk</title>
       </Head>
       <Navbar toggle={toggle} navbar={dummyNavbar} />
