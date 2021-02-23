@@ -56,7 +56,9 @@ const Navbar = ({ toggle, navbar }) => {
           </ExternalNavLink>*/}
           </NavMenu>
         </NavContainer>
-        <Logo height="21px" width="150px" src={"./logo.png"} />
+        <a href="https://offerspill.com" target="_blank" rel="noopener">
+          <Logo height="21px" width="150px" src={"./logo.png"} />
+        </a>
       </Nav>
     </>
   );
