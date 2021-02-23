@@ -3,8 +3,15 @@ import { Heading, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "../../client";
+const BlockContent = require("@sanity/block-content-to-react");
 
 const builder = imageUrlBuilder(client);
+
+const serializers = {
+  types: {
+    block: (props) => <div style={{ minHeight: "1rem" }}>{props.children}</div>,
+  },
+};
 
 const StyledInstructors = styled.div`
   min-height: 100vh;
@@ -47,11 +54,7 @@ const Instructor = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
   max-width: 350px;
-`;
-
-const Image = styled.img`
-  clip-path: circle();
-  margin: 0 auto;
+  position: relative;
 `;
 
 const Title = styled.span`
@@ -60,18 +63,32 @@ const Title = styled.span`
   text-align: center;
 `;
 
-const Description = styled.p`
+const Description = styled(BlockContent)`
   font-size: 16px;
   text-align: center;
   color: #3d3c3c;
   margin-top: 1rem;
 `;
 
-const InstructorContent = styled.div`
+const TextContent = styled.p`
+  text-align: center;
   display: flex;
+  flex-direction: column;
+`;
+
+const InstructorContent = styled.div`
+  color: black;
+  display: flex;
+  max-width: 1300px;
   flex-basis: auto;
   flex-wrap: wrap;
   justify-content: center;
+`;
+
+const Image = styled.img`
+  clip-path: circle();
+  margin: 0 auto;
+  max-height: 380px;
 `;
 
 const Instructors = ({ instructors }) => {
@@ -87,12 +104,15 @@ const Instructors = ({ instructors }) => {
       <InstructorContent>
         {instructors.map((instructor) => (
           <Instructor>
-            <div>
-              <Image src={urlFor(instructor.image).width(160).url()} />
-            </div>
-            <Name>{instructor.name}</Name>
-            <Title>{instructor.title}</Title>
-            <Description>{instructor.description}</Description>
+            <Image src={urlFor(instructor.image).width(1000).url()} />
+            <TextContent>
+              <Name>{instructor.name}</Name>
+              <Title>{instructor.title}</Title>
+              <Description
+                blocks={instructor.description}
+                serializers={serializers}
+              />
+            </TextContent>
           </Instructor>
         ))}
       </InstructorContent>
