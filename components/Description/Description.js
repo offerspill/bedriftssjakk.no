@@ -31,6 +31,8 @@ const StyledDescription = styled.div`
 const Content = styled(BlockContent)`
   padding: 10rem;
 
+  max-width: 2000px;
+
   @media screen and (max-width: 1170px) {
     font-size: 28px;
     padding: 8rem;

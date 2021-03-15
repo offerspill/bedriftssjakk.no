@@ -4,14 +4,19 @@ import Image from "next/image";
 import { Heading, Text } from "@chakra-ui/react";
 
 const StyledHero = styled.div`
-  font-size: 24px;
-  box-sizing: border-box;
-
   background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
 
   color: ${(props) => props.theme.colors.text.light};
+`;
+
+const HeroContent = styled.div`
+  font-size: 24px;
+  box-sizing: border-box;
   min-height: calc(100vh - 80px);
   padding: 3rem;
+
+  max-width: 2000px;
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
@@ -105,22 +110,24 @@ const Column2 = styled.div`
 const Hero = () => {
   return (
     <StyledHero>
-      <Column1>
-        <TextContent>
-          <Heading as="h1" size="4xl" mb="2rem" mt="4rem">
-            Sjakk for bedrifter
-          </Heading>
-          <StyledText>Hjemmekontor?</StyledText>
-          <StyledText>
-            Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
-            kolleger samtidig som du lærer noe nyttig?
-          </StyledText>
-        </TextContent>
-        <ButtonLink href="#pakker">Se våre pakker</ButtonLink>
-      </Column1>
-      <Column2>
-        <img width="600px" src="./chess.jpeg" />
-      </Column2>
+      <HeroContent>
+        <Column1>
+          <TextContent>
+            <Heading as="h1" size="4xl" mb="2rem" mt="4rem">
+              Sjakk for bedrifter
+            </Heading>
+            <StyledText>Hjemmekontor?</StyledText>
+            <StyledText>
+              Hva med et avbrekk som trener hjernen og lar deg konkurrere mot
+              kolleger samtidig som du lærer noe nyttig?
+            </StyledText>
+          </TextContent>
+          <ButtonLink href="#pakker">Se våre pakker</ButtonLink>
+        </Column1>
+        <Column2>
+          <img width="600px" src="./chess.jpeg" />
+        </Column2>
+      </HeroContent>
     </StyledHero>
   );
 };
