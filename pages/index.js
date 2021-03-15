@@ -16,8 +16,6 @@ function Home({ data }) {
     setIsOpen(!isOpen);
   };
 
-  console.log("data", data);
-
   const dummyNavbar = [
     { link: "/", title: "Hjem" },
     { link: "#pakker", title: "Våre pakker" },
@@ -46,7 +44,10 @@ function Home({ data }) {
       <Hero />
       <Description about={data.about} />
       <Packages />
-      <Instructors instructors={data.instructors} />
+      <Instructors
+        instructors={data.instructors}
+        instructors_description={data.instructors_description}
+      />
       <Contact />
     </>
   );
