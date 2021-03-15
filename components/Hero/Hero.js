@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import { Heading, Text } from "@chakra-ui/react";
+import { Heading, Text, useColorMode } from "@chakra-ui/react";
 
 const StyledHero = styled.div`
   background: linear-gradient(to left, #ffffff 40%, #423cec 20%);
@@ -108,6 +108,14 @@ const Column2 = styled.div`
 `;
 
 const Hero = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  useEffect(() => {
+    if (colorMode === "dark") {
+      toggleColorMode();
+    }
+  }, []);
+
   return (
     <StyledHero>
       <HeroContent>
